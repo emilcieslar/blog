@@ -1,0 +1,25 @@
+<script language="javascript" type="text/javascript" src="/edit_area/edit_area_full.js"></script>
+<script language="javascript" type="text/javascript">
+editAreaLoader.init({
+    id : "postBody"       // textarea id
+    ,syntax: "js"          // syntax to be uses for highgliting
+    ,start_highlight: true      // to display with highlight mode on start-up
+});
+</script>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            	<form id="addPost" name="editPost" method="post">
+            		<button class="btn" type="submit" name="addPostButton">Upravit příspěvek</button>
+            		<input type="text" placeholder="Jméno" name="postName" value="{{post.name}}">
+            		<input type="text" placeholder="Podtitul" name="postSubheading" value="{{post.subheading}}">
+            		<textarea id="postBody" name="postBody">{{post.body}}</textarea>
+                    <input type="hidden" name="id" value="{{post._id}}">
+            	</form>
+            </div>
+        </div>
+    </div>
+</article>

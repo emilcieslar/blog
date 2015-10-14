@@ -1,0 +1,36 @@
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <!--<a href="#" class="btn btn-primary btn-sm">NodeJS <span class="badge">3</span></a>-->
+
+            {{#each posts}}
+                <div class="post-preview">
+                    <a href="/post/{{nameUrl}}">
+                        <h2 class="post-title">
+                            {{name}}
+                        </h2>
+                        {{#if subheading}}
+                        <h3 class="post-subtitle">
+                            {{subheading}}
+                        </h3>
+                        {{/if}}
+                    </a>
+                    <p class="post-meta"><a href="#">{{userId}}</a>, {{datetime}} 
+                        <a href="/post/remove/{{nameUrl}}">[Odstranit]</a>
+                        <a href="/post/edit/{{nameUrl}}">[Upravit]</a>
+                    </p>
+
+                </div>
+                <hr>
+            {{/each}}
+           
+            <!-- Pager -->
+            <!--<ul class="pager">
+                <li class="next">
+                    <a href="#">Older Posts &rarr;</a>
+                </li>
+            </ul>-->
+        </div>
+    </div>
+</div>

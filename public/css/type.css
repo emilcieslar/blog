@@ -1,0 +1,20 @@
+@font-face {
+    font-family: "MonitorPro-Normal";
+    src: url("../type/MonitorPro-Normal.eot");
+    src: local("☺"),
+    url("../type/MonitorPro-Normal.woff") format("woff");
+}
+
+@font-face {
+    font-family: "MonitorPro-SemiBold";
+    src: url("../type/MonitorPro-SemiBold.eot");
+    src: local("☺"),
+    url("../type/MonitorPro-SemiBold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "SinaNovaRegWeb";
+    src: url("../type/SinaNovaRegWeb.eot");
+    src: local("☺"),
+    url("../type/SinaNovaRegWeb.woff") format("woff");
+}

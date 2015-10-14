@@ -1,0 +1,45 @@
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <p>Pokud vyplníte níže uvedený formulář, budu se snažit vám odepsat během 24 hodin.</p>
+            <form name="sentMessage" id="contactForm" novalidate method="post">
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                        <label>Jméno</label>
+                        <input type="text" name="name" class="form-control" placeholder="Jméno" id="name" required data-validation-required-message="Prosím vložte vaše jméno.">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                        <label>Emailová adresa</label>
+                        <input type="email" name="email" class="form-control" placeholder="Emailová adresa" id="email" required data-validation-required-message="Prosím vložte vaši emailovou adresu.">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                        <label>Telefon</label>
+                        <input type="tel" name="number" class="form-control" placeholder="Telefon" id="phone">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                        <label>Zpráva</label>
+                        <textarea rows="5" name="message" class="form-control" placeholder="Zpráva" id="message" required data-validation-required-message="Prosím vložte zprávu."></textarea>
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <br>
+                <div id="success"></div>
+                <div class="row">
+                    <div class="form-group col-xs-12">
+                        <button type="submit" class="btn btn-default">Odeslat</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
