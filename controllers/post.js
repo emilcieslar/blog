@@ -5,7 +5,7 @@ var mongoose = require('mongoose')
 // Auth middleware
 var auth = require('../middleware/auth.js')
 // Database methods
-var db = require('../middleware/db.js')
+var dbFunc = require('../middleware/db.js')
 
 // add post page
 router.get('/add', auth.isLoggedIn, function(req, res) {
@@ -40,7 +40,7 @@ router.get('/edit/:postname', auth.isLoggedIn, function(req, res) {
 			res.redirect(303, '/post/add')
 		}
 		else
-			func.getLabels(function(labels) {
+			dbFunc.getLabels(function(labels) {
 				// render edit page
 				res.render('edit-post', {
 					'post': post,
@@ -100,7 +100,7 @@ router.get('/:postname', function(req, res) {
 			console.log(err)
 			res.redirect(303, '/')
 		} else
-			func.getLabels(function(labels) {
+			dbFunc.getLabels(function(labels) {
 				// render post page
 				res.render('post', {
 					'post': true,
