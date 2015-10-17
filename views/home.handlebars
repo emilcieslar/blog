@@ -2,8 +2,6 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <!--<a href="#" class="btn btn-primary btn-sm">NodeJS <span class="badge">3</span></a>-->
-
             {{#each posts}}
                 <div class="post-preview">
                     <a href="/post/{{nameUrl}}">
@@ -16,9 +14,11 @@
                         </h3>
                         {{/if}}
                     </a>
-                    <p class="post-meta"><a href="#">{{userId}}</a>, {{datetime}} 
-                        <a href="/post/remove/{{nameUrl}}">[Odstranit]</a>
-                        <a href="/post/edit/{{nameUrl}}">[Upravit]</a>
+                    <p class="post-meta"><a href="#">{{userId}}</a>, {{datetime}}
+                        {{#if ../user}} 
+                            <a href="/post/remove/{{nameUrl}}">[Odstranit]</a>
+                            <a href="/post/edit/{{nameUrl}}">[Upravit]</a>
+                        {{/if}}
                     </p>
 
                 </div>

@@ -4,6 +4,7 @@ editAreaLoader.init({
     id : "postBody"       // textarea id
     ,syntax: "js"          // syntax to be uses for highgliting
     ,start_highlight: true      // to display with highlight mode on start-up
+    ,word_wrap: true
 });
 </script>
 
@@ -14,8 +15,17 @@ editAreaLoader.init({
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             	<form id="addPost" name="editPost" method="post">
             		<button class="btn" type="submit" name="addPostButton">Upravit příspěvek</button>
-            		<input type="text" placeholder="Jméno" name="postName" value="{{post.name}}">
-            		<input type="text" placeholder="Podtitul" name="postSubheading" value="{{post.subheading}}">
+                    <div class="row control-group">
+                        <select class="form-control" name="labels" multiple>
+                            {{{generateSelect labels post.labelIds}}}
+                        </select>
+                    </div>
+                    <div class="row control-group">
+            		  <input class="form-control" type="text" placeholder="Jméno" name="postName" value="{{post.name}}">
+                    </div>
+                    <div class="row control-group">
+            		  <input class="form-control" type="text" placeholder="Podtitul" name="postSubheading" value="{{post.subheading}}">
+                    </div>
             		<textarea id="postBody" name="postBody">{{post.body}}</textarea>
                     <input type="hidden" name="id" value="{{post._id}}">
             	</form>
@@ -23,3 +33,11 @@ editAreaLoader.init({
         </div>
     </div>
 </article>
+
+<script>
+
+    $(document).ready(function() {
+        var labels = JSON.parse('{{{json labels}}}');
+    })
+
+</script>

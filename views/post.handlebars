@@ -7,10 +7,17 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                {{#if user}}
+                    <p>
+                        <a href="/post/remove/{{nameUrl}}">[Odstranit]</a>
+                        <a href="/post/edit/{{nameUrl}}">[Upravit]</a>
+                    </p>
+                {{/if}}
+
                 <p>
-                    <a href="/post/remove/{{nameUrl}}">[Odstranit]</a>
-                    <a href="/post/edit/{{nameUrl}}">[Upravit]</a>
-                </p>
+                {{#each (generateLabels labels labelIds)}}
+                    <span class="label label-labels">{{.}}</span>
+                {{/each}}</p>
 
                 {{{body}}}
                 <!--

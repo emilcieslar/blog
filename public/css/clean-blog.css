@@ -82,6 +82,20 @@ pre {
   font-family: monospace;
   font-size: 13px;
 }
+.label {
+  padding-top: .5em;
+}
+.label-default {
+  background: #ddd;
+  color: #404040;
+  border: 1px solid #ccc;
+}
+
+.label-labels {
+  background: #45d695;
+  color: white;
+  padding: 1em 1.2em .8em;
+}
 @media only screen and (min-width: 768px) {
   .navbar-custom {
     background: transparent;

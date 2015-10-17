@@ -9,6 +9,7 @@ var postSchema = mongoose.Schema({
 	datetime: { type: Date, default: Date.now },
 	userId: { type: String, default: 'Emil Cieslar' },
 	body: String,
+	labelIds: [mongoose.Schema.ObjectId],
 	removed: { type: Boolean, default: false }
 })
 

@@ -24,6 +24,9 @@ router.post('/contact', function(req, res) {
 			console.log('Message send: ' + info.response)
 	})
 
+	// Set flash message
+	req.flash('contactSuccess', 'Vaše zpráva byla úspěšně odeslána')
+
 	// Redirect back to contact
 	res.redirect(303, '/contact')
 })
