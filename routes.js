@@ -76,7 +76,7 @@ module.exports = function(app, passport) {
 		// Get all posts
 		var context = null;
 		var Post = require('./models/post.js')
-		Post.find({ removed: false }).sort('-datetime').exec(function(err, posts) {
+		Post.find({ removed: false }).sort('datetime').exec(function(err, posts) {
 			if(err) {
 				console.log(err)
 				res.render('home', {
