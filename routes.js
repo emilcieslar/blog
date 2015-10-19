@@ -19,11 +19,11 @@ module.exports = function(app, passport) {
     // show the login form
     app.get('/login', function(req, res) {
         // render the page and pass in any flash data if it exists
-        res.render('login', { 
+        res.render('login', {
         	message: req.flash('loginMessage'),
         	heading: 'Přihlásit se',
-        	bg: 'omne.jpg' 
-        }); 
+        	bg: 'omne.jpg'
+        });
     });
 
     // process the login form
@@ -40,7 +40,7 @@ module.exports = function(app, passport) {
     /*app.get('/signup', function(req, res) {
 
         // render the page and pass in any flash data if it exists
-        res.render('signup', { 
+        res.render('signup', {
         	message: req.flash('signupMessage'),
         	heading: 'Vytvořte si účet',
         	bg: 'omne.jpg'
@@ -61,7 +61,7 @@ module.exports = function(app, passport) {
         req.logout();
         res.redirect('/');
     });
-	
+
 	// about page
 	app.get('/about', function(req, res) {
 		res.render('about', {
@@ -76,12 +76,12 @@ module.exports = function(app, passport) {
 		// Get all posts
 		var context = null;
 		var Post = require('./models/post.js')
-		Post.find({ removed: false }, function(err, posts) {
+		Post.find({ removed: false }).sort('-date').exec(function(err, posts) {
 			if(err) {
 				console.log(err)
 				res.render('home', {
 					'bg':'frida.jpg',
-					'heading':'Web o webu', 
+					'heading':'Web o webu',
 					'subheading':'Web o programování webových aplikací a světa kolem nich (v češtině)'
 				})
 			}
@@ -108,7 +108,7 @@ module.exports = function(app, passport) {
 						// render home page with list of posts
 						res.render('home', {
 							'bg':'frida.jpg',
-							'heading':'Web o webu', 
+							'heading':'Web o webu',
 							'subheading':'Web o programování webových aplikací a světa kolem nich (v češtině)',
 							'posts': context.posts,
 							'labels': labels
@@ -141,7 +141,7 @@ module.exports = function(app, passport) {
 // route middleware to make sure a user is logged in
 function isLoggedIn(req, res, next) {
 
-    // if user is authenticated in the session, carry on 
+    // if user is authenticated in the session, carry on
     if (req.isAuthenticated())
         return next();
 
