@@ -2,7 +2,7 @@
 // get all the tools we need
 var express = require('express')
 var app = express()
-var port = process.env.PORT || 3000
+var port = process.env.PORT || 8081
 var mongoose = require('mongoose')
 var handlebars = require('express-handlebars')
 var flash = require('connect-flash');

@@ -3,11 +3,11 @@
  * Copyright 2014 Start Bootstrap
  * Licensed under Apache 2.0 (https://github.com/IronSummitMedia/startbootstrap/blob/gh-pages/LICENSE)
  */
-
 body {
   font-family: 'SinaNovaRegWeb', 'Times New Roman', serif;
   font-size: 20px;
   color: #404040;
+  -webkit-font-smoothing: antialiased!important;
 }
 p {
   line-height: 1.5;
@@ -203,7 +203,7 @@ pre {
   line-height: 1.1;
   display: block;
   font-family: 'MonitorPro-Normal', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  
+
   margin: 10px 0 0;
 }
 @media only screen and (min-width: 768px) {
@@ -228,7 +228,7 @@ pre {
 .intro-header .post-heading .meta {
   font-family: 'SinaNovaRegWeb', 'Times New Roman', serif;
   font-style: italic;
-  
+
   font-size: 20px;
 }
 .intro-header .post-heading .meta a {
